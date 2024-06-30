@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #3fff7f;
+$secondary: #81ffab;
+$dark: #000000;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+}
+
+nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-padding-top {
+  padding-top: 72px;
+}
+
+.fs-huge {
+    font-size: 5em;
+}

@@ -1,0 +1,19 @@
+<main class="container">
+    <section class="custom-padding-top mb-5">
+        <div class="row row-cols-2">
+
+            @for (fotoCategoria of fotosCategorias; track fotoCategoria) {
+
+            <div class="col-md-4">
+                <div class="card mb-4 border-0 rounded-0">
+                    <a [routerLink]="['/fotos', fotoCategoria.id]"> <img [src]="fotoCategoria.url_imagen_portada"
+                            class="card-img-top rounded-0" alt="{{ fotoCategoria.titulo }}">
+                    </a>
+                </div>
+            </div>
+            }
+
+        </div>
+
+    </section>
+</main>
