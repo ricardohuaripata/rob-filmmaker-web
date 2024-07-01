@@ -1,1 +1,19 @@
-<p>videos works!</p>
+<main class="container">
+    <section class="custom-padding-top mb-5">
+        <div class="row row-cols-2">
+
+            @for (video of videos; track video) {
+
+            <div class="ratio ratio-16x9 my-5">
+                <video preload="auto" playsinline="true" controls>
+                    <source [src]="video.url_video" type="video/mp4">
+                    Tu navegador no soporta el tag de video.
+                </video>
+            </div>
+
+            }
+
+        </div>
+
+    </section>
+</main>
