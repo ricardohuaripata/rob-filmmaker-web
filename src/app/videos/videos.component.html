@@ -1,15 +1,26 @@
 <main class="container">
-    <section class="custom-padding-top mb-5">
-        <div class="row row-cols-2">
+    <section class="my-5">
+        <div class="row">
 
             @for (video of videos; track video) {
 
-            <div class="ratio ratio-16x9 my-5">
+            @if (video.tipo == "interno") {
+            <div class="ratio ratio-16x9 mb-4">
                 <video preload="auto" playsinline="true" controls>
                     <source [src]="video.url_video" type="video/mp4">
                     Tu navegador no soporta el tag de video.
                 </video>
             </div>
+            }
+
+            @else {
+
+            <a [href]="video.url_video" target="_blank" class=" mb-5"> <img [src]="video.url_miniatura" class="card-img-top rounded-0"
+                    alt="{{ video.url_video }}">
+            </a>
+
+
+            }
 
             }
 

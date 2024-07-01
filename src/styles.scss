@@ -1,5 +1,4 @@
-$primary: #3fff7f;
-$secondary: #81ffab;
+$primary: #ffffff;
 $dark: #000000;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -18,6 +17,6 @@ nav {
   padding-top: 72px;
 }
 
-.fs-huge {
-    font-size: 5em;
+[data-bs-theme=dark] {
+  --bs-body-bg: #000000
 }
