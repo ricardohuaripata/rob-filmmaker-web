@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FotoCategoria } from '../interfaces/foto-categoria';
-import { FotosService } from '../services/fotos.service';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-fotos',
@@ -13,10 +12,8 @@ import { RouterModule } from '@angular/router';
 export class FotosComponent implements OnInit {
   fotosCategorias: FotoCategoria[] = [];
 
-  constructor(private fotosService: FotosService) {}
-  ngOnInit(): void {
-    this.fotosService.getFotos().subscribe((data: FotoCategoria[]) => {
-      this.fotosCategorias = data;
-    });
+  constructor(private route: ActivatedRoute) {
+    this.fotosCategorias = this.route.snapshot.data['fotosCategorias'];
   }
+  ngOnInit(): void {}
 }

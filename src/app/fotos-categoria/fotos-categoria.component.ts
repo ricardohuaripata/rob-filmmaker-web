@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Foto } from '../interfaces/foto';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FotosService } from '../services/fotos.service';
+import { ActivatedRoute } from '@angular/router';
 import { FotoCategoria } from '../interfaces/foto-categoria';
 
 @Component({
@@ -14,24 +12,9 @@ import { FotoCategoria } from '../interfaces/foto-categoria';
 export class FotosCategoriaComponent implements OnInit {
   fotoCategoria: FotoCategoria | undefined;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private fotosService: FotosService
-  ) {}
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    
-    this.fotosService
-      .getFotos()
-      .subscribe((fotosCategorias: FotoCategoria[]) => {
-        this.fotoCategoria = fotosCategorias.find(
-          (fotoCategoria) => fotoCategoria.id === id
-        );
-        if (!this.fotoCategoria) {
-          this.router.navigate(['/fotos']);
-        }
-      });
+  constructor(private route: ActivatedRoute) {
+    this.fotoCategoria = this.route.snapshot.data['fotoCategoria'];
   }
+
+  ngOnInit(): void {}
 }
