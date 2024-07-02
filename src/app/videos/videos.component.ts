@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from '../interfaces/video';
 import { ActivatedRoute } from '@angular/router';
+import { SafeUrlPipe } from '../pipes/safe-url.pipe';
 
 @Component({
   selector: 'app-videos',
   standalone: true,
-  imports: [],
+  imports: [SafeUrlPipe],
   templateUrl: './videos.component.html',
   styleUrl: './videos.component.scss',
 })

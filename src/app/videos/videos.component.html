@@ -5,20 +5,22 @@
             @for (video of videos; track video) {
 
             @if (video.tipo == "interno") {
-            <div class="ratio ratio-16x9 mb-4">
-                <video preload="auto" playsinline="true" controls>
+            <div class="ratio ratio-16x9 mb-5">
+                <video preload="none" playsinline="true" controls [poster]="video.url_miniatura">
                     <source [src]="video.url_video" type="video/mp4">
                     Tu navegador no soporta el tag de video.
                 </video>
             </div>
+
+
             }
 
             @else {
 
-            <a [href]="video.url_video" target="_blank" class=" mb-5"> <img [src]="video.url_miniatura" class="card-img-top rounded-0"
-                    alt="{{ video.url_video }}">
-            </a>
-
+            <iframe width="560" height="315" class="mb-5" [src]="video.url_video | safeUrl" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             }
 
