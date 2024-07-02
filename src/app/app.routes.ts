@@ -9,22 +9,27 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    title: 'ROB | Fotógrafo / Filmmaker'
   },
   {
     path: 'fotos',
     component: FotosComponent,
+    title: 'Fotos | ROB'
   },
   {
     path: 'fotos/:id',
     component: FotosCategoriaComponent,
+    title: 'Fotos Categoria | ROB'
   },
   {
     path: 'videos',
     component: VideosComponent,
+    title: 'Videos | ROB'
   },
   {
     path: 'contacto',
     component: ContactoComponent,
+    title: 'Contacto | ROB'
   },
   {
     path: '**',
