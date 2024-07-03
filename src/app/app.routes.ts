@@ -305,7 +305,7 @@ const videos: Video[] = [
       'https://video.wixstatic.com/video/6bc4fd_6e693797c28642689f61bab9ff5ee291/1080p/mp4/file.mp4',
     tipo: 'interno',
     url_miniatura:
-      'https://1221studio.es/wp-content/uploads/2023/08/CAELE-MOSBY-1024x460.jpg',
+      'img/video-2.png',
   },
 
   {
@@ -314,7 +314,7 @@ const videos: Video[] = [
       'https://video.wixstatic.com/video/6bc4fd_b73e6695461147618e1388cd9b38575c/1080p/mp4/file.mp4',
     tipo: 'interno',
     url_miniatura:
-      'https://1221studio.es/wp-content/uploads/2023/08/CAELE-MOSBY-1024x460.jpg',
+      'img/video-3.png',
   },
   {
     id: '4',
@@ -322,7 +322,7 @@ const videos: Video[] = [
       'https://video.wixstatic.com/video/6bc4fd_c82c9752c7b849c68a132b443b628e4d/1080p/mp4/file.mp4',
     tipo: 'interno',
     url_miniatura:
-      'https://1221studio.es/wp-content/uploads/2023/08/CAELE-MOSBY-1024x460.jpg',
+      'img/video-4.png',
   },
   {
     id: '5',
@@ -330,7 +330,7 @@ const videos: Video[] = [
       'https://video.wixstatic.com/video/6bc4fd_a8070b3bfee749bf8e7d63295ee703ab/1080p/mp4/file.mp4',
     tipo: 'interno',
     url_miniatura:
-      'https://1221studio.es/wp-content/uploads/2023/08/CAELE-MOSBY-1024x460.jpg',
+      'img/video-5.png',
   },
 ];
 
