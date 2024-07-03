@@ -6,7 +6,12 @@
 
         <div class="col-md-4 p-1">
             <div class="card border-0 rounded-0">
-                <img [src]="foto.url_imagen" class="card-img-top rounded-0" alt="{{ foto.url_imagen }}" loading="lazy">
+                <div pDefer>
+                    <ng-template>
+                        <img [src]="foto.url_imagen" class="card-img-top rounded-0" alt="{{ foto.url_imagen }}" loading="lazy">
+
+                    </ng-template>
+                </div>
             </div>
         </div>
         }
