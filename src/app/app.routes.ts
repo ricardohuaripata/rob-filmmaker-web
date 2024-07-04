@@ -596,14 +596,9 @@ const videos: Video[] = [
 
 export const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
-    title: 'ROB | Fotógrafo / Filmmaker',
-  },
-  {
     path: 'fotos',
     component: FotosComponent,
-    title: 'Fotos | ROB',
+    title: 'Fotografía | ROB',
     data: { fotosCategorias: fotosCategorias },
   },
   {
@@ -643,13 +638,18 @@ export const routes: Routes = [
     data: { videos: videos },
   },
   {
+    path: 'sobre-mi',
+    component: HomeComponent,
+    title: 'Sobre mí| ROB',
+  },
+  {
     path: 'contacto',
     component: ContactoComponent,
     title: 'Contacto | ROB',
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'fotos',
     pathMatch: 'full',
   },
 ];
