@@ -640,7 +640,7 @@ export const routes: Routes = [
   {
     path: 'sobre-mi',
     component: HomeComponent,
-    title: 'Sobre mí| ROB',
+    title: 'Sobre mí | ROB',
   },
   {
     path: 'contacto',
