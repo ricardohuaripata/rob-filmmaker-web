@@ -1,5 +1,7 @@
 <main class="container">
     <section class="mb-5">
+        <h1 class="text-center my-4">{{ fotoCategoria?.titulo?.toUpperCase() }}</h1>
+
         <div class="row row-cols-2">
 
             @for (foto of fotoCategoria?.fotos; track foto) {

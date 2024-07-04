@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Foto } from '../interfaces/foto';
 import { DeferModule } from 'primeng/defer';
+import { ImageModule } from 'primeng/image';
 
 @Component({
   selector: 'app-publicaciones',
   standalone: true,
-  imports: [DeferModule],
+  imports: [DeferModule, ImageModule],
   templateUrl: './publicaciones.component.html',
   styleUrl: './publicaciones.component.scss',
 })
