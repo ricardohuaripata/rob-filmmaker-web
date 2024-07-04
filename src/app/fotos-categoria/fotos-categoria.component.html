@@ -7,9 +7,8 @@
             @for (foto of fotoCategoria?.fotos; track foto) {
 
             <div class="col-md-4 p-1">
-                <div class="card border-0 rounded-0">
-                    <img [src]="foto.url_imagen" class="card-img-top rounded-0" alt="{{ foto.url_imagen }}" loading="lazy">
-                </div>
+                    <img [src]="foto.url_imagen_miniatura" class="thumbnail" width="100%" alt="{{ foto.url_imagen }}"
+                        loading="lazy" (click)="imageClick($index)">
             </div>
             }
 
@@ -17,3 +16,11 @@
 
     </section>
 </main>
+
+<p-galleria [value]="fotoCategoria?.fotos" [(visible)]="displayCustom" [(activeIndex)]="activeIndex"
+    [containerStyle]="{ 'max-width': '850px' }" [circular]="true" [fullScreen]="true" [showItemNavigators]="true"
+    [showThumbnails]="false">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.url_imagen" style="width: 100%; display: block;" />
+    </ng-template>
+</p-galleria>

@@ -7,5 +7,14 @@ main {
 }
 
 h1 {
-  font-weight:900;
+  font-weight: 900;
+}
+
+.thumbnail {
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  opacity: 0.5;
 }
