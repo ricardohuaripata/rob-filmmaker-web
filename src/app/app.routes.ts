@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { Foto } from './interfaces/foto';
 import { FotoCategoria } from './interfaces/foto-categoria';
 import { Video } from './interfaces/video';
+import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 
 const fotosCategorias: FotoCategoria[] = [
   {
@@ -596,6 +597,11 @@ const videos: Video[] = [
 
 export const routes: Routes = [
   {
+    path: '',
+    component: HomeComponent,
+    title: 'ROB | Fotógrafo / Filmmaker'
+  },
+  {
     path: 'fotos',
     component: FotosComponent,
     title: 'Fotografía | ROB',
@@ -639,7 +645,7 @@ export const routes: Routes = [
   },
   {
     path: 'sobre-mi',
-    component: HomeComponent,
+    component: SobreMiComponent,
     title: 'Sobre mí | ROB',
   },
   {
@@ -649,7 +655,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'fotos',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];

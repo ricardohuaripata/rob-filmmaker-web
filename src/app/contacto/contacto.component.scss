@@ -1,3 +1,7 @@
 .container {
   max-width: 1200px;
 }
+
+main {
+  min-height: calc(100vh - (192px + 187.16px));
+}

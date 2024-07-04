@@ -1,33 +1,15 @@
 <main class="container">
-    <section class="custom-padding-top mx-3 pb-5">
-        <div class="row">
-            <div class="col-md-7 mb-4">
-                <div class="d-flex align-items-center gap-2">
-                    <h1 class="fw-bold my-0">ROB</h1>
-                    <h5 class="my-0">(Rafa del Olmo Bueno)</h5>
-                </div>
+    <section class="mb-5">
 
-                <h5>Sevilla, España</h5>
+        <div class="row row-cols-2">
 
-                <p class="fs-4 mt-5">Busco crear historias e ideas a través de mi interés en música, la moda y la
-                    cultura
-                    que me
-                    rodea, usando la fotografía y el vídeo.</p>
-                <p class="fs-4 mt-4">Fue en cuarentena cuando todo parecía limitado, y sin más material que mi propio
-                    móvil,
-                    cuando empecé a crear a través de la fotografía.</p>
-                <p class="fs-4 mt-4">Hoy en día la mayor parte de mi trabajo se trata de fotografía creativa y
-                    artística,
-                    además
-                    de videoclips bajo la productora audiovisual 1221STUDIO.</p>
+            @for (foto of fotos; track foto) {
 
+            <div class="col-md-3 p-1">
+                <p-image [src]="foto.url_imagen" [alt]="foto.url_imagen" width="100%" [preview]="true" />
             </div>
-            <div class="col-md-5">
-                <img src="img/rob-retrato.webp" class="mx-auto d-block" alt="rob-retrato" width="100%"
-                    style="mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
-            </div>
+            }
+
         </div>
     </section>
-    <app-publicaciones></app-publicaciones>
-
 </main>
