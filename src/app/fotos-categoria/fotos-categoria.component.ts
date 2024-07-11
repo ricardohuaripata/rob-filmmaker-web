@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FotoCategoria } from '../interfaces/foto-categoria';
 import { GalleriaModule } from 'primeng/galleria';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-fotos-categoria',
   standalone: true,
-  imports: [GalleriaModule],
+  imports: [GalleriaModule, MatGridListModule],
   templateUrl: './fotos-categoria.component.html',
   styleUrl: './fotos-categoria.component.scss',
 })

@@ -2,17 +2,20 @@
     <section class="mb-5">
         <h1 class="text-center my-4">{{ fotoCategoria?.titulo?.toUpperCase() }}</h1>
 
-        <div class="row row-cols-2">
-
+        <mat-grid-list cols="3" rowHeight="1:1" [gutterSize]="'12px'" class="foto-grid-list">
             @for (foto of fotoCategoria?.fotos; track foto) {
+                
+                @if ($index < 6) {
+                    <mat-grid-tile> <img [src]="foto.url_imagen_miniatura!" height="100%" width="100%" class="thumbnail"
+                        alt="{{ foto.url_imagen }}" (click)="imageClick($index)" loading="eager"></mat-grid-tile>
+                } @else {
+                    <mat-grid-tile> <img [src]="foto.url_imagen_miniatura!" height="100%" width="100%" class="thumbnail"
+                        alt="{{ foto.url_imagen }}" (click)="imageClick($index)" loading="lazy"></mat-grid-tile>
+                }
 
-            <div class="col-md-4 p-1">
-                    <img [src]="foto.url_imagen_miniatura" class="thumbnail" width="100%" alt="{{ foto.url_imagen }}"
-                        loading="lazy" (click)="imageClick($index)">
-            </div>
             }
 
-        </div>
+        </mat-grid-list>
 
     </section>
 </main>
