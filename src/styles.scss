@@ -6,7 +6,8 @@ $dark: #000000;
 body {
   background: #000000;
   color: #ffffff;
-  font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+  font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman,
+    sans-serif;
 }
 
 nav {
@@ -18,6 +19,11 @@ nav {
   padding-top: 72px;
 }
 
-[data-bs-theme=dark] {
-  --bs-body-bg: #000000
+[data-bs-theme="dark"] {
+  --bs-body-bg: #000000;
+}
+
+.thumbnail {
+  cursor: pointer;
+  object-fit: cover;
 }

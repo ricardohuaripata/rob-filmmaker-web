@@ -1,10 +1,10 @@
 <main class="container">
     <section class="my-5">
-        <div class="row row-cols-2 px-2">
+        <div class="row row-cols-2">
 
             @for (fotoCategoria of fotosCategorias; track fotoCategoria) {
 
-            <div class="col-md-4 p-2">
+            <div class="col-md-4 mb-4">
                 <div class="ratio ratio-1x1 bg-light">
                     <a [routerLink]="['/fotos', fotoCategoria.id]"> <img [src]="fotoCategoria.url_imagen_portada"
                             class="thumbnail" height="100%" width="100%" loading="eager"
