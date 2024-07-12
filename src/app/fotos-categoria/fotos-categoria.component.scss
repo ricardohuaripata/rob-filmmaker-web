@@ -18,15 +18,7 @@ h1 {
 .thumbnail:hover {
   opacity: 0.5;
 }
+
 mat-grid-tile {
   background: rgb(255, 255, 255);
-}
-.foto-grid-list {
-  --cols: 3;
-}
-
-@media (max-width: 450px) {
-  .foto-grid-list {
-    --cols: 2 !important;
-  }
 }
