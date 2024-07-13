@@ -21,7 +21,8 @@
                         </svg>
                     </a>
 
-                    <a class="nav-link" href="https://wa.me/349999999999/?text=¡Hola!,%20estoy%20interesado%20en%20tus%20servicios%20"
+                    <a class="nav-link"
+                        href="https://wa.me/349999999999/?text=¡Hola!,%20estoy%20interesado%20en%20tus%20servicios%20"
                         target="_blank" title="Mandar mensaje de whatsapp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                             viewBox="0 0 16 16">
@@ -44,10 +45,12 @@
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div>
                         <div class="form-floating mb-2">
-                            <input type="text" class="form-control rounded-0" formControlName="name" placeholder id="name" autocomplete="name" [ngClass]="{ 'is-invalid': form.get('name')!.invalid && this.submited }">
+                            <input type="text" class="form-control rounded-0" formControlName="name" placeholder
+                                id="name" autocomplete="name">
                             <label for="name">Nombre</label>
-                            <div *ngIf="form.get('name')!.hasError('required')" class="invalid-feedback">
-                                Por favor, rellena este campo
+                            <div *ngIf="form.get('name')!.hasError('required') && this.submited"
+                                class="mt-1 text-danger">
+                                <small> Por favor, rellena este campo</small>
                             </div>
                         </div>
                     </div>
@@ -55,13 +58,17 @@
                     <div class="row g-2">
                         <div class="col-6">
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control rounded-0" formControlName="email" placeholder id="email" autocomplete="email" [ngClass]="{ 'is-invalid': form.get('email')!.invalid && this.submited }">
+                                <input type="text" class="form-control rounded-0" formControlName="email" placeholder
+                                    id="email" autocomplete="email">
                                 <label for="email">Email</label>
-                                <div *ngIf="form.get('email')!.hasError('required')" class="invalid-feedback">
-                                    Por favor, rellena este campo
+                                <div *ngIf="form.get('email')!.hasError('required') && this.submited"
+                                    class="mt-1 text-danger">
+                                    <small> Por favor, rellena este campo</small>
                                 </div>
-                                <div *ngIf="form.get('email')!.hasError('email')" class="invalid-feedback">
-                                    Por favor, introduce un email válido
+                                <div *ngIf="form.get('email')!.hasError('email') && this.submited"
+                                    class="mt-1 text-danger">
+                                    <small>Por favor, introduce un email válido</small>
+
                                 </div>
                             </div>
 
@@ -70,7 +77,8 @@
 
                         <div class="col-6">
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control rounded-0" formControlName="phoneNumber" placeholder id="phoneNumber" autocomplete="tel">
+                                <input type="text" class="form-control rounded-0" formControlName="phoneNumber"
+                                    placeholder id="phoneNumber" autocomplete="tel">
                                 <label for="phoneNumber">Móvil (opcional)</label>
                             </div>
                         </div>
@@ -78,10 +86,12 @@
                     </div>
 
                     <div class="form-floating">
-                        <textarea class="form-control rounded-0" placeholder formControlName="message" style="height: 250px" id="message" [ngClass]="{ 'is-invalid': form.get('message')!.invalid && this.submited }"></textarea>
+                        <textarea class="form-control rounded-0" placeholder formControlName="message"
+                            style="height: 250px" id="message"></textarea>
                         <label for="message">Mensaje</label>
-                        <div *ngIf="form.get('message')!.hasError('required')" class="invalid-feedback">
-                            Por favor, rellena este campo
+                        <div *ngIf="form.get('message')!.hasError('required') && this.submited"
+                            class="mt-1 text-danger">
+                            <small> Por favor, rellena este campo</small>
                         </div>
                     </div>
 
