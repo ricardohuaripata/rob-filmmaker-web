@@ -4,11 +4,11 @@
     <section class="py-5 mx-3">
         <div class="row">
             <div class="col-md-4 mb-5">
-                <h1 class="fw-bold mb-5 display-5">CONTACTO</h1>
+                <h1 class="fw-bold mb-5">CONTACTO</h1>
 
-                <h3 class="fw-bold">Email:</h3>
+                <h4 class="fw-bold">Email:</h4>
                 <p>rob.phs02&#64;gmail.com</p>
-                <h3 class="fw-bold mt-4">Móvil:</h3>
+                <h4 class="fw-bold mt-4">Móvil:</h4>
                 <p>+34 693 23 53 85</p>
 
                 <div class="d-flex gap-3 mt-4">
@@ -43,16 +43,17 @@
             </div>
             <div class="col-md-8" data-bs-theme="dark">
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                    <div>
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control rounded-0" formControlName="name" placeholder
-                                id="name" autocomplete="name">
-                            <label for="name">Nombre</label>
-                            <div *ngIf="form.get('name')!.hasError('required') && this.submited"
-                                class="mt-1 text-danger">
-                                <small>Por favor, escribe tu nombre</small>
-                            </div>
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control rounded-0" formControlName="name" placeholder id="name"
+                            autocomplete="name">
+                        <label for="name">Nombre</label>
+
+                        @if (form.get('name')!.hasError('required') && this.submited) {
+                        <div class="mt-1 text-danger">
+                            <small>Por favor, escribe tu nombre</small>
                         </div>
+                        }
+
                     </div>
 
                     <div class="row g-2">
@@ -61,15 +62,20 @@
                                 <input type="text" class="form-control rounded-0" formControlName="email" placeholder
                                     id="email" autocomplete="email">
                                 <label for="email">Email</label>
-                                <div *ngIf="form.get('email')!.hasError('required') && this.submited"
-                                    class="mt-1 text-danger">
+
+                                @if (form.get('email')!.hasError('required') && this.submited) {
+                                <div class="mt-1 text-danger">
                                     <small>Por favor, escribe tu email</small>
                                 </div>
-                                <div *ngIf="form.get('email')!.hasError('email') && this.submited"
-                                    class="mt-1 text-danger">
-                                    <small>Por favor, introduce un email válido</small>
+                                }
 
+                                @if (form.get('email')!.hasError('email') && this.submited) {
+                                <div class="mt-1 text-danger">
+                                    <small>Por favor, introduce un email válido</small>
                                 </div>
+                                }
+
+
                             </div>
 
 
@@ -89,11 +95,20 @@
                         <textarea class="form-control rounded-0" placeholder formControlName="message"
                             style="height: 250px" id="message"></textarea>
                         <label for="message">Mensaje</label>
-                        <div *ngIf="form.get('message')!.hasError('required') && this.submited"
-                            class="mt-1 text-danger">
+
+                        @if (form.get('message')!.hasError('required') && this.submited) {
+                        <div class="mt-1 text-danger">
                             <small>Por favor, escribe un mensaje</small>
                         </div>
+                        }
+
                     </div>
+
+                    @if (this.successSubmit) {
+                    <div class="mt-4 alert alert-success" role="alert">
+                        🎉 El mensaje ha sido enviado exitosamente.
+                    </div>
+                    }
 
                     <div class="mt-4 d-flex justify-content-end">
                         <button class="btn btn-outline-light btn-lg px-5 rounded-0" type="submit">Enviar</button>

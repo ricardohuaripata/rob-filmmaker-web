@@ -5,7 +5,6 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 //import emailjs from '@emailjs/browser';
@@ -13,7 +12,7 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-contacto',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, ToastModule],
+  imports: [ReactiveFormsModule, ToastModule],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.scss',
   providers: [MessageService]
@@ -22,6 +21,7 @@ export class ContactoComponent {
   form: FormGroup;
   submited: boolean = false;
   loading: boolean = false;
+  successSubmit: boolean = false;
 
   constructor(private fb: FormBuilder, private messageService: MessageService) {
     this.form = this.fb.group({
@@ -34,6 +34,7 @@ export class ContactoComponent {
 
   async onSubmit(): Promise<void> {
     this.submited = true;
+    this.successSubmit = false;
     if (this.form.invalid) {
       return;
     }
@@ -55,7 +56,8 @@ export class ContactoComponent {
     this.loading = false;
 
     //if (response.status == 200) {
-      this.messageService.add({ severity: 'success', summary: 'Enviado', detail: 'El mensaje se ha enviado correctamente.', life: 3000 });
+      //this.messageService.add({ severity: 'success', summary: 'Enviado', detail: 'El mensaje se ha enviado correctamente.', life: 3000 });
+      this.successSubmit = true;
     //}
 
   }
