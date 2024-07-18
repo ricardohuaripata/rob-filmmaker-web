@@ -44,47 +44,46 @@
             <div class="col-md-8" data-bs-theme="dark">
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control rounded-0" formControlName="name" placeholder id="name"
+                        <input type="text" class="form-control" formControlName="name" placeholder id="name"
                             autocomplete="name">
                         <label for="name">Nombre</label>
 
-                        @if (form.get('name')!.hasError('required') && this.submited) {
-                        <div class="mt-1 text-danger">
-                            <small>Por favor, escribe tu nombre</small>
-                        </div>
-                        }
-
                     </div>
+                    @if (form.get('name')!.hasError('required') && this.submited) {
+
+                    <div class="mt-2 alert alert-danger py-1" role="alert">
+                        <small>Por favor, escribe tu nombre</small>
+                    </div>
+                    }
 
                     <div class="row g-2">
                         <div class="col-6">
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control rounded-0" formControlName="email" placeholder
-                                    id="email" autocomplete="email">
+                                <input type="text" class="form-control" formControlName="email" placeholder id="email"
+                                    autocomplete="email">
                                 <label for="email">Email</label>
 
-                                @if (form.get('email')!.hasError('required') && this.submited) {
-                                <div class="mt-1 text-danger">
-                                    <small>Por favor, escribe tu email</small>
-                                </div>
-                                }
-
-                                @if (form.get('email')!.hasError('email') && this.submited) {
-                                <div class="mt-1 text-danger">
-                                    <small>Por favor, introduce un email válido</small>
-                                </div>
-                                }
-
-
                             </div>
+
+                            @if (form.get('email')!.hasError('required') && this.submited) {
+                            <div class="mt-2 alert alert-danger py-1" role="alert">
+                                <small>Por favor, escribe tu email</small>
+                            </div>
+                            }
+
+                            @if (form.get('email')!.hasError('email') && this.submited) {
+                            <div class="mt-2 alert alert-danger py-1" role="alert">
+                                <small>Por favor, introduce un email válido</small>
+                            </div>
+                            }
 
 
                         </div>
 
                         <div class="col-6">
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control rounded-0" formControlName="phoneNumber"
-                                    placeholder id="phoneNumber" autocomplete="tel">
+                                <input type="text" class="form-control" formControlName="phoneNumber" placeholder
+                                    id="phoneNumber" autocomplete="tel">
                                 <label for="phoneNumber">Móvil (opcional)</label>
                             </div>
                         </div>
@@ -92,26 +91,25 @@
                     </div>
 
                     <div class="form-floating">
-                        <textarea class="form-control rounded-0" placeholder formControlName="message"
-                            style="height: 250px" id="message"></textarea>
+                        <textarea class="form-control" placeholder formControlName="message" style="height: 250px"
+                            id="message"></textarea>
                         <label for="message">Mensaje</label>
-
-                        @if (form.get('message')!.hasError('required') && this.submited) {
-                        <div class="mt-1 text-danger">
-                            <small>Por favor, escribe un mensaje</small>
-                        </div>
-                        }
-
                     </div>
 
+                    @if (form.get('message')!.hasError('required') && this.submited) {
+                    <div class="mt-2 alert alert-danger py-1" role="alert">
+                        <small>Por favor, escribe un mensaje</small>
+                    </div>
+                    }
+
                     @if (this.successSubmit) {
-                    <div class="mt-4 alert alert-success" role="alert">
+                    <div class="mt-2 alert alert-success" role="alert">
                         🎉 El mensaje ha sido enviado exitosamente.
                     </div>
                     }
 
                     <div class="mt-4 d-flex justify-content-end">
-                        <button class="btn btn-outline-light btn-lg px-5 rounded-0" type="submit">Enviar</button>
+                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Enviar</button>
 
                     </div>
                 </form>
