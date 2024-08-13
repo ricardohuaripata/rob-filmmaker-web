@@ -44,7 +44,7 @@
             <div class="col-md-8" data-bs-theme="dark">
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" formControlName="name" placeholder id="name"
+                        <input type="text" class="form-control rounded-0" formControlName="name" placeholder id="name"
                             autocomplete="name">
                         <label for="name">Nombre</label>
 
@@ -59,7 +59,7 @@
                     <div class="row g-2">
                         <div class="col-6">
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control" formControlName="email" placeholder id="email"
+                                <input type="text" class="form-control rounded-0" formControlName="email" placeholder id="email"
                                     autocomplete="email">
                                 <label for="email">Email</label>
 
@@ -82,7 +82,7 @@
 
                         <div class="col-6">
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control" formControlName="phoneNumber" placeholder
+                                <input type="text" class="form-control rounded-0" formControlName="phoneNumber" placeholder
                                     id="phoneNumber" autocomplete="tel">
                                 <label for="phoneNumber">Móvil (opcional)</label>
                             </div>
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder formControlName="message" style="height: 250px"
+                        <textarea class="form-control rounded-0" placeholder formControlName="message" style="height: 250px"
                             id="message"></textarea>
                         <label for="message">Mensaje</label>
                     </div>
@@ -109,7 +109,7 @@
                     }
 
                     <div class="mt-4 d-flex justify-content-end">
-                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Enviar</button>
+                        <button class="btn btn-outline-light btn-lg px-5 rounded-0" type="submit">Enviar</button>
 
                     </div>
                 </form>

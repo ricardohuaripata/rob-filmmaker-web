@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ImageModule } from 'primeng/image';
 import { Foto } from '../interfaces/foto';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Foto } from '../interfaces/foto';
   styleUrl: './home.component.scss',
   imports: [ImageModule],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   fotos: Foto[] = [
     {
       url_imagen: 'img/359844730_1069989833981259_5067933966138917679_n.jpg',
@@ -48,4 +49,15 @@ export class HomeComponent {
       url_imagen: 'img/314788719_617887126688086_398783252969678026_n.jpg',
     },
   ];
+  
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const videoElement = <HTMLVideoElement>document.getElementById('background-video');
+      if (videoElement) {
+        videoElement.muted = true;
+      }
+    }
+  }
 }

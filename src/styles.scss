@@ -16,11 +16,18 @@ nav {
   min-height: 187.16px;
 }
 
-.custom-padding-top {
-  padding-top: 72px;
-}
-
 .thumbnail {
   cursor: pointer;
   object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999997;
+}
+.active-route {
+  color: #999997;
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark py-4" aria-label="navbar">
+<nav class="navbar navbar-expand-md navbar-dark py-4" aria-label="navbar">
     <div class="container">
         <a class="navbar-brand p-0 m-0" [routerLink]="['/']">
             <img src="img/rob-logo.webp" loading="eager" alt="rob-logo" width="150px">
@@ -9,22 +9,22 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-md-center text-center" id="navbar10">
+        <div class="collapse navbar-collapse justify-content-center text-center" id="navbar10">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link fs-4 fw-bold" [routerLink]="['/fotos']"
-                        [routerLinkActive]="['active']">FOTOGRAFÍA</a>
+                <li class="nav-item px-3 py-2">
+                    <a class="fs-5 fw-bold" [routerLink]="['/fotos']"
+                        [routerLinkActive]="['active-route']">FOTOGRAFÍA</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 fw-bold" [routerLink]="['/videos']"
-                        [routerLinkActive]="['active']">VÍDEOS</a>
+                <li class="nav-item px-3 py-2">
+                    <a class="fs-5 fw-bold" [routerLink]="['/videos']"
+                        [routerLinkActive]="['active-route']">VÍDEOS</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 fw-bold" [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">SOBRE MÍ</a>
+                <li class="nav-item px-3 py-2">
+                    <a class="fs-5 fw-bold" [routerLink]="['/sobre-mi']" [routerLinkActive]="['active-route']">SOBRE MÍ</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 fw-bold" [routerLink]="['/contacto']"
-                        [routerLinkActive]="['active']">CONTACTO</a>
+                <li class="nav-item px-3 py-2">
+                    <a class="fs-5 fw-bold" [routerLink]="['/contacto']"
+                        [routerLinkActive]="['active-route']">CONTACTO</a>
                 </li>
             </ul>
         </div>

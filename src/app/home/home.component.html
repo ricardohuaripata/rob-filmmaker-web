@@ -1,15 +1,15 @@
-<main class="container">
-    <section class="mb-5">
+<div class="video-background">
+    <video autoplay muted loop id="background-video">
+        <source src="https://video.wixstatic.com/video/6bc4fd_6e693797c28642689f61bab9ff5ee291/1080p/mp4/file.mp4"
+            type="video/mp4">
+        Tu navegador no soporta el tag de video.
+    </video>
+</div>
 
-        <div class="row row-cols-2 px-1">
+<main class="container d-flex justify-content-center align-items-center">
 
-            @for (foto of fotos; track foto) {
-
-            <div class="col-md-3 p-1">
-                <p-image [src]="foto.url_imagen" [alt]="foto.url_imagen" width="100%" [preview]="true" />
-            </div>
-            }
-
-        </div>
+    <section>
+        <h1 class="display-1">WELCOME</h1>
     </section>
+
 </main>
