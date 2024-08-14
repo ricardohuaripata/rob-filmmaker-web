@@ -503,7 +503,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'ROB Profile | Fotógrafo / Filmmaker',
+    title: 'HOME | ROB Profile',
   },
   {
     path: 'fotos',
