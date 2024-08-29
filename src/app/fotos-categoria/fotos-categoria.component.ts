@@ -11,7 +11,7 @@ import { GalleriaModule } from 'primeng/galleria';
   styleUrl: './fotos-categoria.component.scss',
 })
 export class FotosCategoriaComponent implements OnInit {
-  fotoCategoria: FotoCategoria | undefined;
+  fotoCategoria: FotoCategoria;
   displayCustom: boolean = false;
   activeIndex: number = 0;
 

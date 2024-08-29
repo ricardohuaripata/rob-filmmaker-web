@@ -1,9 +1,9 @@
 <main class="container">
     <section class="mb-5">
-        <h1 class="text-center my-4">{{ fotoCategoria?.titulo?.toUpperCase() }}</h1>
+        <h1 class="text-center my-4">{{ fotoCategoria.titulo.toUpperCase() }}</h1>
 
         <div class="row row-cols-2 px-1">
-            @for (foto of fotoCategoria?.fotos; track foto) {
+            @for (foto of fotoCategoria.fotos; track foto) {
 
             <div class="col-md-4 p-1">
                 <div class="ratio ratio-1x1 bg-light">
@@ -19,7 +19,7 @@
     </section>
 </main>
 
-<p-galleria [value]="fotoCategoria?.fotos" [(visible)]="displayCustom" [(activeIndex)]="activeIndex"
+<p-galleria [value]="fotoCategoria.fotos" [(visible)]="displayCustom" [(activeIndex)]="activeIndex"
     [containerStyle]="{ 'max-width': '850px' }" [circular]="true" [fullScreen]="true" [showItemNavigators]="true"
     [showThumbnails]="false">
     <ng-template pTemplate="item" let-item>
