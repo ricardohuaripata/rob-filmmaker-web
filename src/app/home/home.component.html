@@ -1,12 +1,12 @@
 <main class="container">
     <section class="mb-5">
 
-        <div class="row row-cols-2 px-1">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 px-1">
 
             @for (foto of fotos; track foto) {
 
-            <div class="col-md-3 p-1">
-                <p-image [src]="foto.url_imagen" [alt]="foto.url_imagen" width="100%" [preview]="true" />
+            <div class="col p-1">
+                <p-image [src]="foto.url_imagen" [alt]="foto.url_imagen" width="100%" [preview]="true" [loading]="'lazy'"/>
             </div>
             }
 

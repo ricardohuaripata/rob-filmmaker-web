@@ -1,21 +1,18 @@
-<main class="container">
-    <section class="mb-5">
-        <div class="row row-cols-2 px-1">
+<main class="container my-5">
+    <div class="row row-cols-2 px-1">
 
-            @for (fotoCategoria of fotosCategorias; track fotoCategoria) {
+        @for (fotoCategoria of fotosCategorias; track fotoCategoria) {
 
-            <div class="col-md-4 p-1">
-                <div class="ratio ratio-1x1 bg-light">
-                    <a [routerLink]="['/fotos', fotoCategoria.id]"> <img [src]="fotoCategoria.url_imagen_portada"
-                            class="thumbnail" height="100%" width="100%" loading="eager"
-                            alt="{{ fotoCategoria.titulo }}">
-                    </a>
-                </div>
-
+        <div class="col-md-4 p-1">
+            <div class="ratio ratio-1x1 bg-light">
+                <a [routerLink]="['/fotografia', fotoCategoria.id]"> <img [src]="fotoCategoria.url_imagen_portada"
+                        class="thumbnail" height="100%" width="100%" loading="eager" alt="{{ fotoCategoria.titulo }}">
+                </a>
             </div>
-            }
 
         </div>
+        }
 
-    </section>
+    </div>
+
 </main>
