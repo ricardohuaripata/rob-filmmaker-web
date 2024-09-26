@@ -4,7 +4,6 @@ import { VideosComponent } from './videos/videos.component';
 import { FotosCategoriaComponent } from './fotos-categoria/fotos-categoria.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { HomeComponent } from './home/home.component';
-import { Foto } from './interfaces/foto';
 import { FotoCategoria } from './interfaces/foto-categoria';
 import { Video } from './interfaces/video';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
