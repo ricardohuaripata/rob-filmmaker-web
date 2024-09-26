@@ -1,15 +1,23 @@
-<main class="container">
-    <section class="mb-5">
-
-        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 px-1">
-
-            @for (foto of fotos; track foto) {
-
-            <div class="col p-1">
-                <p-image [src]="foto.url_imagen" [alt]="foto.url_imagen" width="100%" [preview]="true" [loading]="'lazy'"/>
-            </div>
+<main>
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            @for (foto of fotos; track $index) {
+            <div class="item" style="--position: {{$index + 1}}"><img [src]="foto.url_imagen"></div>
             }
-
         </div>
-    </section>
+        <div class="content">
+            <h1 class="mb-3" data-content="ROB">
+                ROB
+            </h1>
+            <div class="author">
+                <h2 class="mb-0">RAFA DEL OLMO BUENO</h2>
+                <p class="mb-3"><b>FILMMAKER</b></p>
+                <p class="fs-5 mb-0">
+                    Busco crear historias e ideas a través de mi interés en música, la moda y la cultura que me rodea,
+                    usando la fotografía y el vídeo.
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
 </main>
