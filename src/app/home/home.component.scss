@@ -30,7 +30,6 @@ main {
 }
 
 .banner .slider .item {
-  border: solid 5px #dfdfdf;
   position: absolute;
   inset: 0 0 0 0;
   transform: rotateY(
@@ -60,20 +59,16 @@ main {
   z-index: 1;
 }
 .banner .content h1 {
-  font-family: ICA Rubrik;
   font-size: 16em;
   line-height: 1em;
-  position: relative;
-}
-.banner .content h1::after {
-  position: absolute;
-  inset: 0 0 0 0;
-  content: attr(data-content);
   z-index: 2;
 }
+
 .banner .content .author {
   text-align: right;
   max-width: 300px;
+  z-index: 2;
+
 }
 .banner .content h2 {
   font-size: 3em;
@@ -106,13 +101,9 @@ main {
   .banner .content h1 {
     text-align: center;
     width: 100%;
-    text-shadow: 0 10px 20px #000;
     font-size: 7em;
   }
   .banner .content .author {
-    padding: 20px;
-    text-shadow: 0 10px 20px #000;
-    z-index: 2;
     max-width: unset;
     width: 100%;
     text-align: center;

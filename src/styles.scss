@@ -28,18 +28,10 @@ $secondary: #000000;
 @import "../node_modules/bootstrap/scss/alert";
 
 body {
-  background-color: #0a0a0a;
-  background-image:
-  repeating-linear-gradient(
-      to right, transparent 0 100px,
-      #45465022 100px 101px
-  ),
-  repeating-linear-gradient(
-      to bottom, transparent 0 100px,
-      #45465022 100px 101px
-  );  color: #e9e9e9;
-  font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman,
-    sans-serif;
+  background-color: #080808;
+  background-image: repeating-linear-gradient(to right, transparent 0 100px, #36363622 100px 101px), repeating-linear-gradient(to bottom, transparent 0 100px, #36363622 100px 101px);
+  color: #e9e9e9;
+  font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
 }
 
 nav {
