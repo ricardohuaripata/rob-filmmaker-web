@@ -5,7 +5,7 @@
         <div class="row row-cols-2 px-1">
             @for (foto of fotoCategoria.fotos; track foto) {
 
-            <div class="col-md-4 p-1">
+            <div class="col-xl-3 p-1">
                 <div class="ratio ratio-1x1 bg-light">
                     <img [src]="foto.url_imagen_miniatura" class="thumbnail" height="100%" width="100%" alt="{{ foto.url_imagen }}"
                         loading="lazy" (click)="imageClick($index)">

@@ -472,7 +472,8 @@ const videos: Video[] = [
     url_video:
       'https://video.wixstatic.com/video/6bc4fd_6e693797c28642689f61bab9ff5ee291/1080p/mp4/file.mp4',
     tipo: 'interno',
-    url_miniatura: 'img/video-2.png',
+    url_miniatura:
+      'https://res.cloudinary.com/dmravgyts/image/upload/v1728176660/projects/rob-profile/video-2-min_m5npy7.png',
   },
 
   {
@@ -480,21 +481,24 @@ const videos: Video[] = [
     url_video:
       'https://video.wixstatic.com/video/6bc4fd_b73e6695461147618e1388cd9b38575c/1080p/mp4/file.mp4',
     tipo: 'interno',
-    url_miniatura: 'img/video-3.png',
+    url_miniatura:
+      'https://res.cloudinary.com/dmravgyts/image/upload/v1728176659/projects/rob-profile/video-3-min_h3pe3g.png',
   },
   {
     id: '4',
     url_video:
       'https://video.wixstatic.com/video/6bc4fd_c82c9752c7b849c68a132b443b628e4d/1080p/mp4/file.mp4',
     tipo: 'interno',
-    url_miniatura: 'img/video-4.png',
+    url_miniatura:
+      'https://res.cloudinary.com/dmravgyts/image/upload/v1728176660/projects/rob-profile/video-4-min_wk1ith.png',
   },
   {
     id: '5',
     url_video:
       'https://video.wixstatic.com/video/6bc4fd_a8070b3bfee749bf8e7d63295ee703ab/1080p/mp4/file.mp4',
     tipo: 'interno',
-    url_miniatura: 'img/video-5.png',
+    url_miniatura:
+      'https://res.cloudinary.com/dmravgyts/image/upload/v1728176659/projects/rob-profile/video-5-min_hx7eom.png',
   },
 ];
 
